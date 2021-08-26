@@ -1,13 +1,5 @@
 #include<stdio.h>
 #include<stdlib.h>
-// creating a function for displaying the list i.e an array
-int printArray(int *array, int size){
-    int count, newSizeOfList;
-    for(count=0;count<newSizeOfList;++count){
-        printf("\nlistA[%d] = %d", count, *(array+count));
-    }
-    return 1;
-}
 // creating a function to insert element into the list i.e an array
 int insertElementInListAt(int*list, int size, int location, int element){
     int newSizeOfList,count;
@@ -31,6 +23,13 @@ int deletion(int*list, int size, int index){
         list[count] = list[count+1];                            // every element is shifted to its left to fill empty index
     newSizeOfList = --size;                         // size of array reduced after deletion
     return newSizeOfList;
+}
+int printArray(int *array, int size){
+    int count, newSizeOfList;
+    for(count=0;count<newSizeOfList;++count){
+        printf("\nlistA[%d] = %d", count, *(array+count));
+    }
+    return 1;
 }
 // creating a function for  searching an element in the list i.e an array
 int linearSearch(int*list, int size, int element){
